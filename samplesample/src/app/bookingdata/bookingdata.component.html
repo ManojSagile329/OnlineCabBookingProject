@@ -1,0 +1,68 @@
+
+  
+  <div class="home--container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand nav--item" style="color: aliceblue;margin-left: 10px" [routerLink]="['/home']">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <a class="nav-link"  style="color: aliceblue;">SLMBR Cab Services</a>
+        </div>
+       
+        <div>
+            <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+          </div>
+    </nav>
+  
+    <section style="background-image: url('https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png');background-size: cover; height: 89.5vh;">
+  <div class="container" >
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" style="margin-top: 20px;">
+            <div class="card-header d-flex justify-content-between align-items-center" style="background: linear-gradient(315deg, #B7781F, #FEFE07)">
+              <h3 class="card-title" style="font-weight: bold;">Booking Details</h3>
+          
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                        <th>Booking Id</th>
+                        <th>Customer Id </th>
+                        <th>Customer Name</th>
+                        <th>Contact Number</th>
+                        <th>email id</th>
+                        <th>Pick up loction</th>
+                        <th>Drop Location</th>
+                        <th>Journey Duration</th>
+                        <th>distance</th>
+                        <th>vehicleName</th>
+                        <th>vehicleType</th>
+                        <th>Total Fare</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let book of bookings.reverse()">
+                        <td >{{book.bookingId}}</td>
+                        <td>{{book.customerId}}</td>
+                        <td>{{book.customerName}}</td>
+                        <td>{{book.mobileNumber}}</td>
+                        <td>{{book.emailId}}</td>
+                        <td>{{book.source}}</td>
+                        <td>{{book.destination}}</td>
+                        <td>{{book.duration}}</td>
+                        <td>{{book.distance}} km</td>
+                        <td>{{book.vehicleName}}</td>
+                        <td>{{book.vehicleType}}</td>
+                        <td>₹{{book.farePerKm}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  

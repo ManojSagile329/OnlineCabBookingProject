@@ -1,0 +1,91 @@
+
+<section class="vh-150" style="background-image: url('https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png'); background-size: cover; height: 120vh;" >
+  <style>
+    .required::after {
+        content: " *";
+        color: red;
+    }
+</style>
+ 
+  <div class="container mt-0">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card" style="margin-top: 50px;margin-bottom: 10px;">
+          <div class="card-header" style="background: linear-gradient(315deg, #B7781F, #FEFE07);font-size: x-large;font-weight: bold;">
+            SLMBR Cab Services
+          </div>
+          <div class="card-body" >
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
+              <h3  style="margin-left: 240px;">Sign up</h3>
+             
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="customerName?.invalid && (customerName?.touched || mouseoverLogin)">Required</em>
+                  <label class="form-label" for="form3Example1c">Your Name<span class="required"></span>:</label>
+                  <input type="text" id="customerName" [(ngModel)]="customerName" name="customerName" class="form-control"required>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="email?.invalid && (email?.touched || mouseoverLogin)">Required</em>
+                  <label class="form-label" for="form3Example3c">Your Email<span class="required"></span>:</label>
+                  <input pattern="[a-zA-Z0-9]+@[a-zA-Z]+.[a-z]{2,3}" type="email" id="email" [(ngModel)]="email" name="email" 
+                  class="form-control" title="Email id should contain atleast one UpperCase and LowerCase Letter"  required >
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="contactNumber?.invalid && (contactNumber?.touched || mouseoverLogin)">Required</em>
+                  <em *ngIf="contactNumber<6000000000 || contactNumber>9999999999"></em>
+                    <label class="form-label" for="form3Example4c">Phone Number<span class="required"></span>:</label>
+                    <input type="tel" id="contactNumber" [(ngModel)]="contactNumber" name="contactNumber" class="form-control" 
+                    pattern="[0-9]{10}" required title="phone number should be ten numbers only">
+                </div>
+              </div>
+            
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="gender?.invalid && (gender?.touched || mouseoverLogin)">Required</em>
+                    <label class="form-label" for="form3Example4c">Gender<span class="required"></span>:</label>
+                    <input type="text" id="gender" [(ngModel)]="gender" name="gender" class="form-control"  required>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="username?.invalid && (username?.touched || mouseoverLogin)">Required</em>
+                    <label class="form-label" for="form3Example4c">Username<span class="required"></span>:</label>
+                    <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control"  required>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <em *ngIf="password?.invalid && (password?.touched || mouseoverLogin)">Required</em>
+                    <label class="form-label" for="form3Example4c">Password<span class="required"></span>:</label>
+                    <input pattern="[a-zA-Z0-9]+"  type="password" id="password" [(ngModel)]="password" name="password" class="form-control" 
+                 required >
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+              </div>
+          
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </section>
+

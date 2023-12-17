@@ -1,0 +1,176 @@
+<body>
+  <div class="home--container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <a class="navbar-brand nav--item" style="color: aliceblue;margin-left: 10px;" [routerLink]="['/home']">Home</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <a class="nav-link"  style="color: aliceblue;">SLMBR Cab Services</a>
+          </div>
+         
+          <div>
+              <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+            </div>
+      </nav>
+         
+      <nav class="navbar navbar-expand-lg navbar-custom  bg-secondary">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#navbarToggle' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="#navbarToggle">
+            <div class="navbar-nav">
+              <button class="nav-item nav-link text-light" style="margin-right:50px; margin-left:50px" [routerLink]="['/viewdrivers']" >View Drivers</button>
+              <button class="nav-item nav-link text-light" style="margin-right:50px;"  [routerLink]="['/adddriver']">Add a Driver</button>
+              <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/deldriver']">Delete a Driver</button>
+              <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/moddriver']">Modify a Driver</button>
+          
+             
+            </div>
+          </div>
+      </nav>
+  </div>
+
+
+  
+
+  <section class="vh-150" style="background-image: url('https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png');background-size: cover; height: 89.5vh;">
+ 
+  <div class="container mt-0">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card" style="margin-top: 10px; margin-bottom: 10px;">
+          <div class="card-header"style="background: linear-gradient(315deg, #B7781F, #FEFE07);font-size: x-large;font-weight: bold;">
+           
+            Modify a driver
+          </div>
+          <div class="card-body" >
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
+             
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c">Driver Id:</label>
+                <input type="text" id="driverId" [(ngModel)]="driverId" name="driverId" class="form-control"required>
+              </div>
+   
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example3c">Driver Name :</label>
+                <input type="text" id="driverName" [(ngModel)]="driverName" name="driverName" class="form-control" required>
+              </div>
+   
+             
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example4c">License Number:</label>
+                <input type="text" id="licenseNo" [(ngModel)]="licenseNo" name="licenseNo" class="form-control"  required>
+            </div>
+
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="form3Example4c">Contact Number:</label>
+              <input type="text" id="contactNumber" [(ngModel)]="contactNumber" name="contactNumber" class="form-control"  required>
+          </div>
+
+          <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example4c">Driver Rating:</label>
+            <input type="text" id="driverRating" [(ngModel)]="driverRating" name="driverRating" class="form-control"  required>
+        </div>
+   
+        <div class="form-outline flex-fill mb-0">
+          <label class="form-label" for="form3Example4c">Vehicle Id:</label>
+          <input type="text" id="vehicleId" [(ngModel)]="vehicleId" name="vehicleId" class="form-control"  required>
+      </div>
+
+      <br>
+      <div class="d-flex justify-content-center mx-3 mb-3 mb-lg-1">
+        <button type="submit" class="btn btn-primary btn-lg">Modify</button>
+      </div>
+            
+          
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+
+
+<!-- <section class="vh-150" style="background-color: rgb(84, 6, 157);">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px; margin: 40px 0px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-4 col-xl-5 order-2 order-lg-1">
+   
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Modify a driver </p>
+   
+                  <form class="mx-1 mx-md-4" (ngSubmit)="onSubmit()">
+   
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example1c">driver Id:</label>
+                        <input type="text" id="driverId" [(ngModel)]="driverId" name="driverId" class="form-control"required>
+                      </div>
+                    </div>
+   
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c">Driver Name :</label>
+                        <input type="text" id="driverName" [(ngModel)]="driverName" name="driverName" class="form-control" required>
+                       
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">License Number:</label>
+                          <input type="text" id="licenseNo" [(ngModel)]="licenseNo" name="licenseNo" class="form-control"  required title="License Number starts with DL">
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">contact Number:</label>
+                          <input type="text" id="contactNumber" [(ngModel)]="contactNumber" name="contactNumber" class="form-control"  required>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4c">driver Rating:</label>
+                            <input type="text" id="driverRating" [(ngModel)]="driverRating" name="driverRating" class="form-control"  required>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4c">vehicle Id:</label>
+                            <input type="text" id="vehicleId" [(ngModel)]="vehicleId" name="vehicleId" class="form-control"  required>
+                        </div>
+                      </div>
+   
+   
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Modify</button>
+                    </div>
+   
+                  </form>
+   
+                </div>
+                <div class="col-md-5 col-lg-4 col-xl-6 d-flex align-items-center order-1 order-lg-2">
+   
+                  <img src="../assets/driv4.jpg"
+                    class="img-fluid" alt="Sample image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->

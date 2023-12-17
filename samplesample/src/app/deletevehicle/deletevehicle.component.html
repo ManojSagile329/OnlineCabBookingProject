@@ -1,0 +1,91 @@
+<div class="home--container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#" style="color: aliceblue; margin-left: 10px;" [routerLink]="['/home']">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+          <a class="nav-link" href="#" style="color: aliceblue;">SLMBR Cab Services</a>
+      
+    </div>
+    <div>
+      <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+    </div>
+  </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-custom  bg-secondary">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#navbarToggle' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="#navbarToggle">
+          <div class="navbar-nav">
+            <button class="nav-item nav-link text-light" style="margin-right:50px;margin-left:30px;" [routerLink]="['/viewvehicles']">View Vehicles</button>
+            <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/addvehicle']" >Add a Vehicle</button>
+            <button class="nav-item nav-link text-light"  style="margin-right:50px;" [routerLink]="['/delvehicle']">Delete a Vehicle</button>
+            <button class="nav-item nav-link text-light"  style="margin-right:50px;" [routerLink]="['/modvehicle']">Modify a Vehicle</button>
+        
+           
+          </div>
+        </div>
+    </nav>
+    <div class="container mt-0">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card" style="margin-top: 50px; margin-bottom: 10px;">
+            <div class="card-header" style="background: linear-gradient(315deg, #B7781F, #FEFE07);font-size: x-large;font-weight: bold;">
+            Delete
+            </div>
+            <div class="card-body" >
+  
+    
+              <div>  
+                <h2 style="color: red; font-size:xxx-large;">   </h2> 
+                 <div class="container">   
+                    <label for="vehicleId" style="color: rgb(8, 8, 8); ">Vehicle ID to Delete:</label>   
+                     <input type="number" id="vehicleId" [(ngModel)]="vehicleId" name="vehicleId" required title="Enter Vehicle Id" style="margin-left: 10px;">  
+                     <button (click)="onDelete()" class="btn btn-danger" style="margin-left: 10px; ">Delete</button>
+                    </div> 
+                    
+                </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<!-- <div class="home--container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="#" style="color: aliceblue; margin-left: 10px;">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color: aliceblue;">SLMBR Cab Services</a>
+          
+          
+        </ul>
+        
+      </div>
+      <div>
+        <button href="#profile" type="button" class="btn btn-danger" style="text-align:end; margin-left: 200; color: rgb(233, 233, 242);" style="margin-right: 10px;">Log out</button>
+      </div>
+    </nav>
+    <div>  
+        <h2 style="color: red; font-size:xxx-large;">   </h2> 
+         <div class="container">   
+            <label for="vehicleId" style="color: aliceblue; font-size:xx-large; margin-left: 400px; margin-top: 100px;">Vehicle ID to Delete:</label>   
+             <input type="number" id="vehicleId" [(ngModel)]="vehicleId" name="vehicleId" required title="Enter Vehicle Id" style="margin-left: 10px;">  
+             <button (click)="onDelete()" class="btn btn-danger" style="margin-left: 10px; ">Delete</button>
+            </div> 
+            
+        </div>
+</div> -->

@@ -1,0 +1,29 @@
+.home--container{
+  height: 100vh;
+  background-image: url("https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  position: isolate;
+}
+
+.button--container{
+display: flex;
+justify-content: space-evenly;
+margin-top: 80px;
+}
+
+/* .container--1{
+margin-left: 100px;
+} */
+
+.container--1 > button,
+.container--2 > button{
+display: block;
+
+width: 300px;
+padding: 15px 60px;
+margin: 30px 0px;
+}
+
+

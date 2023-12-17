@@ -1,0 +1,56 @@
+
+/* div {
+    margin: 20px;
+  } */
+  
+  h2 {
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #007BFF;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  .resizedTextbox {width: 400px; height: 20px}
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  #cent {
+    position:absolute;
+    top:20%;
+    left:50%;
+    margin-top:50px; /* this is half the height of your div*/  
+    margin-left:-100px; /*this is half of width of your div*/
+  }
+  .border{
+    border: #007BFF;
+    background-color: antiquewhite;
+    border-bottom: 50px;
+    border-top: 50px;
+    border-color: aqua;
+    border-width: 400px;
+    border-left:300px;
+    border-right:150px,
+    
+  }

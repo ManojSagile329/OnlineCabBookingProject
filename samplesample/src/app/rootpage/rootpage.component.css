@@ -1,0 +1,9 @@
+
+.home--container{
+  height: 100vh;
+  background-image: url("https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  position: isolate;
+}

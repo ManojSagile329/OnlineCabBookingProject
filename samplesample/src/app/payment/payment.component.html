@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand nav--item" style="color: aliceblue;margin-left: 10px">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <a class="nav-link"  style="color: aliceblue;">SLMBR Cab Services</a>
+  </div>
+ 
+  <div>
+      <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+    </div>
+</nav>
+
+<div class="home--container">
+<form #loginForm="ngForm"  autocomplete="off" novalidate>
+
+    <button class="btn-light"style="margin-left: 300px; margin-top: 300px;font-size:xxx-large;font-weight:bold;">Thank you for choosing for SLMBR Cab Services</button>
+    
+     <button type="submit"   (click)="click()" style="margin-left: 740px;font-size:x-large"[routerLink]="['/home']" >Go Home</button>
+   
+    
+    
+  </form>
+</div>

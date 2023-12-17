@@ -1,0 +1,53 @@
+*,*::after, *::before{
+  box-sizing: border-box;
+}
+  .navbar-dark .nav-item .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+    color: #fff;
+  }
+  
+  .fa-li {
+    position: relative;
+    left: 0;
+  }
+
+  /* Hero Container */
+  .home--container{
+    height: 100vh;
+    background-image: url("https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    position: relative;
+  }
+
+  .home--container .text--container{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right:0px;
+  }
+
+  .home--desc--1{
+    font-family: Inter;
+    font-style: bold;
+    font-size: 40px;
+    text-decoration-style: solid;
+    text-decoration: black; 
+  }
+
+  .home--desc--2{
+    color: rgb(57, 47, 47);
+    font-weight: bold;
+    font-family: Inter;
+    font-style: bold;
+    font-size: 80px;
+    margin-left: 100px;
+    text-decoration: black;
+  }

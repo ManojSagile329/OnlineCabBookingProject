@@ -1,0 +1,82 @@
+<div class="home--container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand nav--item" style="color: aliceblue; margin-left: 10px;" [routerLink]="['/home']">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <a class="nav-link"  style="color: aliceblue;">SLMBR Cab Services</a>
+      </div>
+     
+      <div>
+          <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+        </div>
+  </nav>
+     
+  <nav class="navbar navbar-expand-lg navbar-custom  bg-secondary">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#navbarToggle' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="#navbarToggle">
+        <div class="navbar-nav">
+          <button class="nav-item nav-link text-light" style="margin-right:50px;margin-left:40px;" [routerLink]="['/viewpath']">View Routes</button>
+          <button class="nav-item nav-link text-light" style="margin-right:50px" [routerLink]="['/addpath']">Add a Route</button>
+          <button class="nav-item nav-link text-light" style="margin-right:50px" [routerLink]="['/delpath']">Delete a Route</button>
+          <button class="nav-item nav-link text-light" style="margin-right:50px" [routerLink]="['/modpath']">Modify a Route</button>
+      
+         
+        </div>
+      </div>
+  </nav>
+</div>
+
+<section class="vh-150" style="background-image: url('https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png'); background-size: cover; height: 89.5vh;" >
+ 
+  <div class="container mt-0">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card" style="margin-top: 50px;margin-bottom: 10px;">
+          <div class="card-header" style="background: linear-gradient(315deg, #B7781F, #FEFE07);font-size: x-large;font-weight: bold;">
+          Add Routes
+          </div>
+          <div class="card-body" >
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
+             
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c">Starting Location:</label>
+                <input type="text" id="source" [(ngModel)]="source" name="source" class="form-control"required>
+              </div>
+
+               <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c">Destination:</label>
+                        <input type="text" id="destination" [(ngModel)]="destination" name="destination" class="form-control" required>
+                       
+                      </div>
+             
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4c">Duration:</label>
+                        <input type="text" id="duration" [(ngModel)]="duration" name="duration" class="form-control" required placeholder="Enter duration in hrs or min format">
+                    </div>
+
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4c">Distance in Km:</label>
+                      <input type="text" id="distance" [(ngModel)]="distance" name="distance" class="form-control"  required placeholder="Enter distance in km">
+                  </div>
+
+            
+      <br>
+       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Add</button>
+                    </div>
+          
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </section>
+
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+button{
+    border-radius: 10px;
+    background-color: #3c3939;
+    color:aliceblue;
+    font-weight: bold;
+            border: 0;
+}
+       
+
+        button:hover {
+            box-shadow: 0px 0px 25px #efeeee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home--container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand nav--item" href="#" style="color: aliceblue;margin-left: 10px;" [routerLink]="['/home']">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <a class="nav-link"  style="color: aliceblue;">SLMBR Cab Services</a>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+              </div>
+        </nav>
+
+        <div class="button--container">
+            <div class="container--1">
+                <button type="button" class="btn btn-Light" [routerLink]="['/drivers']" class="text-Black"  >Manage Drivers</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/paths']" class="text-Black">Manage Routes</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/data']" class="text-Black">Booking Details</button>
+            </div>
+            <div class="container--2">
+                <button type="button" class="btn btn-Light" [routerLink]="['/vehicles']" class="text-Black">Manage Vehicles</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/customers']" class="text-Black">Customers Details</button>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: inline-block;
+            width: 150px;
+            margin-top: 10px;
+            margin-left: 200px;
+            margin-right: 10px;
+            text-align: center;
+
+            padding: 3px 0px;
+
+            border-radius: 10px;
+            border: 0;
+        }
+
+        .nav--item {
+            padding-left: 20px;
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 15px #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home--container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand nav--item" href="#" style="color: aliceblue;">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <a class="navbar-brand nav--item" style="color: aliceblue;">SLMBR Cab Services</a>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+              </div>
+        </nav>
+
+        <div class="button--container">
+            <div class="container--1">
+                <button type="button" class="btn btn-Light" [routerLink]="['/drivers']" class="text-Black" title="Here you can manage driver">Manage Drivers</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/paths']" class="text-Black" title="Here you can manage Routes">Manage Routes</button>
+            </div>
+            <div class="container--2">
+                <button type="button" class="btn btn-Light" [routerLink]="['/vehicles']" class="text-Black" title="Here you can manage Vehicle">Manage Vehicles</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/customers']" class="text-Black" title="Here you can view Customer Details">Customers Details</button>
+                <button type="button" class="btn btn-Light" [routerLink]="['/data']" class="text-Black" title="Here you can view Bookind Details">Booking Details</button>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+</body>
+
+</html> -->
+
+
+<!-- <main>
+    
+    <div class="home--container">
+        
+    </div>
+  </main> -->

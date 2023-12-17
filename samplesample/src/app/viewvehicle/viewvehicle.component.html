@@ -1,0 +1,104 @@
+<div class="home--container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand nav--item" style="color: aliceblue;margin-left: 10px;" [routerLink]="['/home']">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <a class="nav-link" href="#" style="color: aliceblue;">SLMBR Cab Services</a>
+      </div>
+     
+      <div>
+          <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+        </div>
+  </nav>
+     
+  <nav class="navbar navbar-expand-lg navbar-custom  bg-secondary">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#navbarToggle' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="#navbarToggle">
+        <div class="navbar-nav">
+          <button class="nav-item nav-link text-light" style="margin-right:50px;margin-left:50px;" [routerLink]="['/viewvehicles']">View Vehicles</button>
+          <button class="nav-item nav-link text-light"style="margin-right:50px;" [routerLink]="['/addvehicle']" >Add a Vehicle</button>
+          <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/delvehicle']">Delete a Vehicle</button>
+          <button class="nav-item nav-link text-light" style="margin-right:50px;"[routerLink]="['/modvehicle']">Modify a Vehicle</button>
+      
+         
+        </div>
+      </div>
+  </nav>
+</div>
+
+<section  style="background-image: url('https://manojstoragracc.blob.core.windows.net/blob/backgroundimg.png');background-size: cover; height: 82.5vh;">
+<div class="container" style="margin-top: 0px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card"  style="margin-top: 30px;">
+          <div class="card-header d-flex justify-content-between align-items-center" style="background: linear-gradient(315deg, #B7781F, #FEFE07)">
+            <h3 class="card-title" style="font-weight: bold;">Vehicles Details</h3>
+            
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                    <th>Vehicle Id</th>
+                    <th>Vehicle Name</th>
+                    <th>Vehicle Type</th>
+                    <th>Seating Capacity</th>
+                    <th>Fare/Km</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let vehicles of vehiclesarray">
+                    <td >{{vehicles.vehicleId}}</td>
+                    <td>{{vehicles.vehicleName}}</td>
+                    <td>{{vehicles.vehicleType}}</td>
+                    <td>{{vehicles.capacity}}</td>
+                    <td>₹{{vehicles.farePerKm}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="container" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="card-title">Vehicles details</h3>
+            
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                    <th>Vehicle Id</th>
+                    <th>Vehicle Name</th>
+                    <th>Vehicle Type</th>
+                    <th>Seating Capacity</th>
+                    <th>Fare/Km</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let vehicles of vehiclesarray.reverse()">
+                    <td >{{vehicles.vehicleId}}</td>
+                    <td>{{vehicles.vehicleName}}</td>
+                    <td>{{vehicles.vehicleType}}</td>
+                    <td>{{vehicles.capacity}}</td>
+                    <td>{{vehicles.farePerKm}}₹</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

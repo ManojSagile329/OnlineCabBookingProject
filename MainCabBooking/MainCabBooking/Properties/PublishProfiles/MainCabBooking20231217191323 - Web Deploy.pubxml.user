@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVgTlUEdkGE6JB8jlBZQ5FwAAAAACAAAAAAADZgAAwAAAABAAAAC2ZoGIJspESBYhlhKXHfOkAAAAAASAAACgAAAAEAAAAHpxTkAULF1FegXIdbCsYnaAAAAAtb7bc9UlKq26kaU1figxD4iOAA85g/FuGrUDpB6dgdxocAXQYL7aVHl5I9GZdpw7/gMpswDBsYCBoTFS5jJsw3jVBnclejqDegPF4JDxFCuTNW63K7Ipp0SYCS4pMXAWh+DWqTIHuByhLzd7qjLQIY38Oxk/L4N5HPGfLD4EgPEUAAAAg48JOEjJLUkvnd21nkfKuPYWjZc=</EncryptedPassword>
+    <History>True|2023-12-17T19:06:50.1825260Z;True|2023-12-17T19:22:12.8096486+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="MainCabBooking.Models.MainProjectDb">
+      <Value>Data Source=manojdbserver1.database.windows.net,1433%3bInitial Catalog=CarBookingDatabase%3bUser ID=Manoj%3bPassword=CarBooking%40123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

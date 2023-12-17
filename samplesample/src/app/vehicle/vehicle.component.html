@@ -1,0 +1,36 @@
+<div class="home--container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand nav--item" style="color: aliceblue;margin-left: 10px;" [routerLink]="['/home']">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         
+          <a class="nav-link" href="#" style="color: aliceblue;">SLMBR Cab Services</a>
+        </div>
+       
+        <div>
+            <button type="button" class="btn btn-danger" style="width: 100px; height: 50px; margin-right: 10px;"  [routerLink]="['/login']">Log out</button>
+          </div>
+    </nav>
+       
+    <nav class="navbar navbar-expand-lg navbar-custom  bg-secondary">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#navbarToggle' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="#navbarToggle">
+          <div class="navbar-nav">
+            <button class="nav-item nav-link text-light" style="margin-right:50px;margin-left:30p" [routerLink]="['/viewvehicles']">View Vehicles</button>
+            <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/addvehicle']" >Add a Vehicle</button>
+            <button class="nav-item nav-link text-light" style="margin-right:50px;"[routerLink]="['/delvehicle']">Delete a Vehicle</button>
+            <button class="nav-item nav-link text-light" style="margin-right:50px;" [routerLink]="['/modvehicle']">Modify a Vehicle</button>
+        
+           
+          </div>
+        </div>
+    </nav>
+  </div>
+
+
+
+
